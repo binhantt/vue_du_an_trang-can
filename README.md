@@ -14,7 +14,6 @@ A modern, interactive CV website built with Vue 3 and Bootstrap Vue, featuring a
 - 🛠️ Skills showcase
 ## Project Structure
 ```plaintext
-```
 src/
 ├── components/
 │   ├── base/          # Base components
@@ -24,6 +23,7 @@ src/
 ├── views/             # Page components
 ├── assets/            # Static assets
 └── styles/           # Global styles
+```
 ## Tech Stack
 
 - Vue 3 (Composition API)
