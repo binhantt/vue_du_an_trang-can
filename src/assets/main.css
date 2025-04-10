@@ -1,0 +1,199 @@
+:root {
+    /* Layout Variables */
+    --navbar-width: 1200px;
+    --navbar-height: 60px;
+    --sidebar-width: 250px;
+    
+    /* Spacing */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    
+    --size-1: 2rem;
+    --size-2: 1rem;
+    --size-3: 0.875rem;
+    
+    /* Colors */
+    --primary-color: #ffd700;
+    --secondary-color: #ffffff;
+    --text-color: #ffffff;
+    --bg-color: #0a0a0a;
+    --bg-overlay: rgba(255, 255, 255, 0.03);
+    --border-color: rgba(255, 255, 255, 0.05);
+    --card-bg: rgba(10, 10, 10, 0.95);
+    --timeline-bg: rgba(255, 215, 0, 0.15);
+}
+
+/* Global Typography Classes */
+.size-1 { font-size: var(--size-1); }
+.size-2 { font-size: var(--size-2); }
+.size-3 { font-size: var(--size-3); }
+
+/* Layout Styles */
+.main-layout {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Navbar Styles */
+.custom-navbar {
+    background: var(--card-bg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Introduce Page Styles */
+.introduce-container {
+    max-width: var(--navbar-width);
+    margin: 0 auto;
+    padding: var(--space-lg);
+    min-height: calc(100vh - var(--navbar-height));
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.section {
+    margin-bottom: var(--space-lg);
+    background: var(--card-bg);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+.section-title {
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.info-content {
+    color: var(--text-color);
+    line-height: 2;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: var(--space-lg);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--timeline-bg);
+    opacity: 0.3;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: var(--space-lg);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: calc(var(--space-lg) * -1);
+    top: 0;
+    width: var(--space-md);
+    height: var(--space-md);
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: 2px solid var(--bg-color);
+}
+
+.time {
+    color: var(--primary-color);
+    margin-bottom: var(--space-sm);
+}
+
+/* Content Styles */
+.content h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--space-sm);
+}
+
+.content p {
+    color: var(--text-color);
+    margin-bottom: var(--space-sm);
+}
+
+.content ul {
+    color: var(--text-color);
+    padding-left: 1.2rem;
+    margin-top: var(--space-sm);
+}
+
+.content li {
+    margin-bottom: var(--space-sm);
+}
+
+/* Profile Card Styles */
+.profile-card {
+    background: var(--card-bg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: var(--border-radius);
+    padding: var(--space-lg);
+    border: 1px solid var(--border-color);
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .content-wrapper {
+        padding-left: 0 !important;
+    }
+    
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .introduce-container {
+        padding: var(--space-md);
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .section {
+        padding: var(--space-md);
+        margin-bottom: var(--space-md);
+    }
+
+    .timeline {
+        padding-left: var(--space-md);
+    }
+
+    .timeline-item::before {
+        left: calc(var(--space-md) * -1);
+    }
+}

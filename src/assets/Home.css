@@ -1,0 +1,131 @@
+.home-container {
+    min-height: calc(50vh - var(--navbar-height));
+    padding: var(--space-sm) 0;
+}
+
+.profile-card, .experience-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover, .experience-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.avatar-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: var(--space-lg);
+}
+
+.profile-avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    padding: 5px;
+}
+
+.status-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    background: var(--primary-color) !important;
+    color: var(--bg-color) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--bg-color);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.profile-name {
+    color: var(--secondary-color);
+    font-size: var(--size-1);
+    margin-bottom: var(--space-sm);
+}
+
+.profile-title {
+    color: var(--primary-color);
+    font-size: var(--size-2);
+}
+
+.stat-item {
+    background: var(--bg-overlay);
+    padding: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.stat-value {
+    color: var(--primary-color);
+    font-size: var(--size-1);
+    font-weight: bold;
+}
+
+.stat-label {
+    color: var(--text-color);
+    font-size: var(--size-3);
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: var(--size-1);
+    margin-bottom: var(--space-lg);
+}
+
+.timeline {
+    position: relative;
+    padding-left: var(--space-lg);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--timeline-bg);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2.35rem;
+    width: var(--space-md);
+    height: var(--space-md);
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: 3px solid var(--bg-color);
+}
+
+.content-header h4 {
+    color: var(--secondary-color);
+    font-size: var(--size-2);
+    margin-bottom: var(--space-sm);
+}
+
+.company {
+    background: var(--primary-color) !important;
+    color: var(--bg-color) !important;
+}
+
+.period {
+    color: var(--text-color);
+    font-size: var(--size-3);
+}

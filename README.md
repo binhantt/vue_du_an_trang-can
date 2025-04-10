@@ -1,14 +1,36 @@
-# cv
+# Personal CV Website
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern, interactive CV website built with Vue 3 and Bootstrap Vue, featuring a responsive design and smooth animations.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- 🎨 Modern UI/UX with smooth animations
+- 📱 Fully responsive design
+- 🌙 Dynamic theme support
+- 📝 Interactive contact form
+- 🔗 Social media integration
+- 💼 Detailed work experience timeline
+- 🎓 Education history
+- 🛠️ Skills showcase
+## Project Structure
+```plaintext
+```
+src/
+├── components/
+│   ├── base/          # Base components
+│   ├── Contact/       # Contact related components
+│   ├── Experience/    # Experience components
+│   └── Layout/        # Layout components
+├── views/             # Page components
+├── assets/            # Static assets
+└── styles/           # Global styles
+## Tech Stack
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+- Vue 3 (Composition API)
+- Bootstrap Vue
+- AOS (Animate On Scroll)
+- Font Awesome Icons
+- CSS Variables for theming
 
 ## Project Setup
 
