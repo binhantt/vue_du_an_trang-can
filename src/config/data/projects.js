@@ -10,14 +10,7 @@ export const projectsData = {
             demo: 'https://ecommerce.binhan.dev',
             github: 'https://github.com/binhan/ecommerce'
         },
-        {
-            title: 'Ứng dụng Quản lý Công việc',
-            description: 'Ứng dụng quản lý công việc nhóm với tính năng cập nhật thời gian thực và các tính năng làm việc nhóm.',
-            image: '/assets/images/projects/taskmanager.jpg',
-            technologies: ['React', 'Firebase', 'Material-UI'],
-            demo: 'https://tasks.binhan.dev',
-            github: 'https://github.com/binhan/taskmanager'
-        },
+       
         {
             title: 'Backend API Service',
             description: 'RESTful API service xây dựng với Express.js và TypeScript, cung cấp xác thực người dùng và quản lý danh mục. Tích hợp JWT, mã hóa mật khẩu và xác thực captcha.',
