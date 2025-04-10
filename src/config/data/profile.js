@@ -20,11 +20,11 @@ export const profileData = {
             label: "Năm kinh nghiệm"
         },
         projects: {
-            value: 50,
+            value: 3,
             label: "Dự án đã hoàn thành"
         },
         success: {
-            value: 100,
+            value: 50,
             label: "Tỷ lệ thành công"
         }
     },
