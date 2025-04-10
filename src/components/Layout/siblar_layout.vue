@@ -3,18 +3,18 @@
         <div class="sidebar-content mt-4 overflow-hidden">
             <div class="profile-section">
                 <div class="avatar-container">
-                    <b-avatar size="6rem" src="https://chiemtaimobile.vn/images/companies/1/%E1%BA%A2nh%20Blog/avatar-facebook-dep/Anh-avatar-hoat-hinh-de-thuong-xinh-xan.jpg?1704788263223" class="profile-avatar"></b-avatar>
+                    <b-avatar :size="'6rem'" :src="profileData.personal.avatar" class="profile-avatar"></b-avatar>
                     <span class="status-badge size-3">
                         <i class="fas fa-circle text-success"></i>
-                        Available
+                        {{ profileData.personal.status }}
                     </span>
                 </div>
 
                 <div class="profile-info">
-                    <h4 class="name size-1">Binh AnTT</h4>
+                    <h4 class="name size-1">{{ profileData.personal.name }}</h4>
                     <div class="title size-2">
                         <i class="fas fa-laptop-code"></i>
-                        Frontend Developer
+                        {{ profileData.personal.title }}
                     </div>
                 </div>
 
@@ -24,26 +24,23 @@
                     <span></span>
                 </div>
 
-                <div class="bio-section">
-
-                </div>
 
                 <div class="info-section">
                     <div class="info-item size-3">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Hà Nội, Việt Nam</span>
+                        <span>Thành phố Hồ Chí Minh, Việt Nam</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-graduation-cap"></i>
-                        <span>Đại học Hutech</span>
+                        <span>Đại học Công nghệ TP.HCM (HUTECH)</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-code"></i>
-                        <span>Software Engineering</span>
+                        <span>Kỹ sư Phần mềm</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-briefcase"></i>
-                        <span>Frontend Developer at TechCorp</span>
+                        <span>Lập trình viên Frontend tại TechCorp</span>
                     </div>
                 </div>
 
@@ -54,13 +51,13 @@
                 </div>
 
                 <div class="social-links">
-                    <b-button href="#" variant="outline-warning" class="social-btn" target="_blank">
+                    <b-button href="https://github.com/binhan" variant="outline-warning" class="social-btn" target="_blank" title="GitHub">
                         <i class="fab fa-github"></i>
                     </b-button>
-                    <b-button href="#" variant="outline-warning" class="social-btn" target="_blank">
+                    <b-button href="https://linkedin.com/in/binhan" variant="outline-warning" class="social-btn" target="_blank" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </b-button>
-                    <b-button href="mailto:your.email@example.com" variant="outline-warning" class="social-btn">
+                    <b-button href="mailto:binhan@gmail.com" variant="outline-warning" class="social-btn" title="Gửi Email">
                         <i class="fas fa-envelope"></i>
                     </b-button>
                 </div>
@@ -68,6 +65,14 @@
         </div>
     </b-sidebar>
 </template>
+
+<script setup>
+import { profileData } from '@/config/data/profile'
+
+defineOptions({
+    name: 'SiblarLayout'
+})
+</script>
 
 <style scoped>
 
@@ -231,9 +236,3 @@
     }
 }
 </style>
-
-<script>
-export default {
-    name: 'SiblarLayout'
-}
-</script>

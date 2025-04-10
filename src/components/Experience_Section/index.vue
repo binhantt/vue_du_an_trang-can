@@ -1,21 +1,24 @@
 <template>
     <b-col lg="8">
-        <BaseCard title="Work Experience" icon="fas fa-briefcase" animation="fade-left">
+        <BaseCard :title="experienceData.title" :icon="experienceData.icon" animation="fade-left">
             <div class="timeline">
-                <div class="timeline-item">
+                <div v-for="(exp, index) in experienceData.experiences" 
+                     :key="index" 
+                     class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="content-header">
-                            <h4>Senior Frontend Developer</h4>
+                            <h4>{{ exp.position }}</h4>
                             <div class="meta">
-                                <b-badge variant="warning" class="company">Tech Company</b-badge>
-                                <span class="period">2021 - Present</span>
+                                <b-badge variant="warning" class="company">{{ exp.company }}</b-badge>
+                                <span class="period">{{ exp.period }}</span>
                             </div>
                         </div>
                         <b-list-group flush class="content-list">
-                            <b-list-group-item>Lead development of major web applications using Vue.js</b-list-group-item>
-                            <b-list-group-item>Implemented modern UI/UX practices and performance optimizations</b-list-group-item>
-                            <b-list-group-item>Mentored junior developers and managed team projects</b-list-group-item>
+                            <b-list-group-item v-for="(achievement, idx) in exp.achievements" 
+                                             :key="idx">
+                                {{ achievement }}
+                            </b-list-group-item>
                         </b-list-group>
                     </div>
                 </div>
@@ -27,6 +30,7 @@
 <script setup>
 import { defineOptions } from 'vue'
 import BaseCard from '@/components/base/base.vue'
+import { experienceData } from '@/config/data/experience'
 
 defineOptions({
     name: 'Experience'

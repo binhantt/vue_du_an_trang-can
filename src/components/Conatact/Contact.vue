@@ -40,7 +40,7 @@ defineProps({
     },
     title: {
         type: String,
-        default: 'Contact Details'
+        default: 'Liên hệ'
     },
     icon: {
         type: String,

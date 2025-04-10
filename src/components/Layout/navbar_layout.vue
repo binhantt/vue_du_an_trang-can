@@ -1,5 +1,5 @@
 <template>
-    <b-navbar  toggleable="sm" class="custom-navbar " key=""  >
+    <b-navbar toggleable="sm" class="custom-navbar">
         <b-container>
             <b-navbar-toggle target="nav-collapse">
                 <template #default="{ expanded }">
@@ -7,10 +7,10 @@
                 </template>
             </b-navbar-toggle>
 
-            <b-collapse id="nav-collapse" is-nav >
+            <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav>
                     <b-nav-item 
-                        v-for="(route, index) in routes" 
+                        v-for="(route, index) in navbarData.routes" 
                         :key="index"
                         :to="route.path"
                         :active="$route.path === route.path">
@@ -20,27 +20,36 @@
                 </b-navbar-nav>
 
                 <b-navbar-nav class="ms-auto">
-                    <b-nav-item-dropdown text="Social Links" right class="d-lg-none">
-                        <b-dropdown-item href="https://github.com" target="_blank">
-                            <i class="fab fa-github me-2"></i>GitHub
-                        </b-dropdown-item>
-                        <b-dropdown-item href="https://linkedin.com" target="_blank">
-                            <i class="fab fa-linkedin me-2"></i>LinkedIn
+                    <b-nav-item-dropdown text="Mạng xã hội" right class="d-lg-none">
+                        <b-dropdown-item 
+                            v-for="(social, index) in navbarData.social"
+                            :key="index"
+                            :href="social.url" 
+                            target="_blank">
+                            <i :class="social.icon + ' me-2'"></i>
+                            {{ social.name }}
                         </b-dropdown-item>
                     </b-nav-item-dropdown>
 
                     <div class="social-links d-none d-lg-flex">
-                        <b-link href="https://github.com" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </b-link>
-                        <b-link href="https://linkedin.com" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
+                        <b-link 
+                            v-for="(social, index) in navbarData.social"
+                            :key="index"
+                            :href="social.url" 
+                            target="_blank" 
+                            class="social-link"
+                            :title="social.name">
+                            <i :class="social.icon"></i>
                         </b-link>
                     </div>
 
-                    <b-button variant="primary" class="cv-button ms-lg-3">
-                        <i class="fas fa-download me-2"></i>
-                        Download CV
+                    <b-button 
+                        variant="primary" 
+                        class="cv-button ms-lg-3"
+                        :href="navbarData.cv.url"
+                        download>
+                        <i :class="navbarData.cv.icon + ' me-2'"></i>
+                        {{ navbarData.cv.text }}
                     </b-button>
                 </b-navbar-nav>
             </b-collapse>
@@ -50,18 +59,11 @@
 
 <script setup>
 import { defineOptions } from 'vue'
+import { navbarData } from '@/config/data/navbar'
 
 defineOptions({
     name: 'NavbarLayout'
 })
-
-const routes = [
-    { path: '/', name: 'Trang Chủ', icon: 'fas fa-home' },
-    { path: '/gioi-thieu', name: 'Giới Thiệu', icon: 'fas fa-user' },
-    { path: '/ky-nang', name: 'Kỹ Năng', icon: 'fas fa-code' },
-    { path: '/du-an', name: 'Dự Án', icon: 'fas fa-project-diagram' },
-    { path: '/lien-he', name: 'Liên Hệ', icon: 'fas fa-envelope' }
-]
 </script>
 
 <style scoped>

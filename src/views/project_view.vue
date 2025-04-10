@@ -2,17 +2,23 @@
     <MainLayout>
         <b-container class="project-container">
             <h1 class="main-title text-center mb-5" data-aos="fade-down">
-                <i class="fas fa-code-branch me-2"></i>My Projects
+                <i :class="projectsData.icon + ' me-2'"></i>{{ projectsData.title }}
             </h1>
             
             <b-row>
-                <b-col lg="4" md="6" class="mb-4" v-for="(project, index) in projects" :key="index" data-aos="fade-up">
+                <b-col lg="4" md="6" class="mb-4" 
+                       v-for="(project, index) in projectsData.projects" 
+                       :key="index" 
+                       data-aos="fade-up"
+                       :data-aos-delay="index * 100">
                     <b-card class="project-card h-100">
-                        <b-img :src="project.image" class="project-image mb-3"></b-img>
+                        <b-img :src="project.image" 
+                               class="project-image mb-3"
+                               :alt="project.title"></b-img>
                         
                         <h3 class="project-title">{{ project.title }}</h3>
                         
-                        <div class="tech-stack  mb-3">
+                        <div class="tech-stack mb-3">
                             <b-badge 
                                 v-for="tech in project.technologies" 
                                 :key="tech"
@@ -31,14 +37,14 @@
                                 target="_blank" 
                                 variant="outline-primary"
                                 class="me-2">
-                                <i class="fas fa-external-link-alt me-1"></i> Demo
+                                <i class="fas fa-external-link-alt me-1"></i> Xem Demo
                             </b-button>
                             <b-button 
                                 v-if="project.github" 
                                 :href="project.github" 
                                 target="_blank" 
                                 variant="outline-secondary">
-                                <i class="fab fa-github me-1"></i> Code
+                                <i class="fab fa-github me-1"></i> Mã nguồn
                             </b-button>
                         </div>
                     </b-card>
@@ -51,38 +57,11 @@
 <script setup>
 import { defineOptions } from 'vue'
 import MainLayout from '@/components/Layout/main_layout.vue'
-import { ref } from 'vue'
+import { projectsData } from '@/config/data/projects'
 
 defineOptions({
     name: 'ProjectView'
 })
-
-const projects = ref([
-    {
-        title: 'E-Commerce Platform',
-        description: 'A full-featured e-commerce platform with product management, shopping cart, and payment integration.',
-        image: 'https://placehold.co/600x400',
-        technologies: ['Vue.js', 'Node.js', 'MongoDB'],
-        demo: 'https://demo-link.com',
-        github: 'https://github.com/username/project'
-    },
-    {
-        title: 'Task Management App',
-        description: 'A collaborative task management application with real-time updates and team features.',
-        image: 'https://placehold.co/600x400',
-        technologies: ['React', 'Firebase', 'Material-UI'],
-        demo: 'https://demo-link.com',
-        github: 'https://github.com/username/project'
-    },
-    {
-        title: 'Portfolio Website',
-        description: 'A responsive portfolio website showcasing projects and skills.',
-        image: 'https://placehold.co/600x400',
-        technologies: ['Vue.js', 'Bootstrap', 'SCSS'],
-        demo: 'https://demo-link.com',
-        github: 'https://github.com/username/project'
-    }
-])
 </script>
 
 <style scoped>

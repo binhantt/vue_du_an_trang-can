@@ -3,21 +3,30 @@
         <b-container class="py-4">
             <b-row class="g-4">
                 <b-col lg="6">
-                    <BaseCard title="About Me" icon="fas fa-user" animation="fade-up">
-                        <p>Hi there! I'm Binh An, a passionate Frontend Developer based in Ho Chi Minh City. I love
-                            creating beautiful and user-friendly web experiences. When I'm not coding, you can find me
-                            exploring new technologies or enjoying a good cup of coffee.</p>
+                    <BaseCard 
+                        :title="introduceData.about.title" 
+                        :icon="introduceData.about.icon" 
+                        animation="fade-up"
+                    >
+                        <p>{{ introduceData.about.content }}</p>
                     </BaseCard>
                 </b-col>
                 <b-col lg="6">
-                    <BaseCard title="Education Journey" icon="fas fa-graduation-cap" animation="fade-up">
+                    <BaseCard 
+                        :title="introduceData.education.title" 
+                        :icon="introduceData.education.icon" 
+                        animation="fade-up"
+                    >
                         <div class="timeline">
-                            <div class="timeline-item">
-                                <b-badge variant="warning" class="time">2016 - 2020</b-badge>
+                            <div v-for="(edu, index) in introduceData.education.timeline" 
+                                 :key="index" 
+                                 class="timeline-item"
+                            >
+                                <b-badge variant="warning" class="time">{{ edu.period }}</b-badge>
                                 <div class="content">
-                                    <h3>University of Information Technology</h3>
-                                    <p>Bachelor's in Software Engineering</p>
-                                    <p>Focused on Web Development and UI/UX Design</p>
+                                    <h3>{{ edu.school }}</h3>
+                                    <p>{{ edu.degree }}</p>
+                                    <p>{{ edu.focus }}</p>
                                 </div>
                             </div>
                         </div>
@@ -31,6 +40,7 @@
 <script setup>
 import MainLayout from '@/components/Layout/main_layout.vue'
 import BaseCard from '@/components/base/base.vue'
+import { introduceData } from '@/config/data/introduce'
 import { defineOptions } from 'vue'
 
 defineOptions({
