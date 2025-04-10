@@ -4,7 +4,7 @@ export const projectsData = {
     projects: [
         {
             title: 'Vue-AnatonLandingPage',
-            description: 'Một nền tảng thương mại điện tử đầy đủ tính năng với quản lý sản phẩm, giỏ hàng và tích hợp thanh toán.',
+            description: 'Trang landing page giới thiệu sản phẩm với giao diện hiện đại, hiệu ứng chuyển động mượt mà và tương thích trên mọi thiết bị.',
             image: '/bt.png',
             technologies: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS'],
             demo: 'https://ecommerce.binhan.dev',
@@ -28,7 +28,7 @@ export const projectsData = {
         },
         {
             title: 'CV Portfolio Website',
-            description: 'Landing page với các hiệu ứng chuyển động mượt mà, animation đẹp mắt và giao diện người dùng tương tác.',
+            description: 'Website CV cá nhân hiện đại được xây dựng với Vue 3 và Bootstrap Vue, tích hợp nhiều tính năng như timeline kinh nghiệm, form liên hệ, chế độ theme động, và hiệu ứng chuyển động mượt mà. Thiết kế responsive và tối ưu trải nghiệm người dùng.',
             image: '/cv-portfolio.png',
             technologies: [
                 'Vue 3',
