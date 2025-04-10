@@ -1,49 +1,79 @@
 <template>
-        <b-col lg="4">
-                    <b-card class="profile-card" data-aos="fade-right">
-                        <div class="profile-header">
-                            <div class="avatar-wrapper">
-                                <b-img src="https://chiemtaimobile.vn/images/companies/1/%E1%BA%A2nh%20Blog/avatar-facebook-dep/Anh-avatar-hoat-hinh-de-thuong-xinh-xan.jpg?1704788263223" alt="Profile" class="profile-avatar" />
-                                <b-badge variant="success" class="status-badge">
-                                    <span class="status-dot"></span>
-                                    Available for Work
-                                </b-badge>
-                            </div>
-                            <h2 class="profile-name">Binh An</h2>
-                            <p class="profile-title">
-                                <i class="fas fa-code me-2"></i>
-                                Frontend Developer
-                            </p>
-                        </div>
-                        
-                        <b-row class="profile-stats mx-0">
-                            <b-col  class="px-2">
-                                <div class="stat-item">
-                                    <span class="stat-value">3<span class="plus">+</span></span>
-                                    <span class="stat-label">Years</span>
-                                </div>
-                            </b-col>
-                            <b-col  class="px-2">
-                                <div class="stat-item">
-                                    <span class="stat-value">50<span class="plus">+</span></span>
-                                    <span class="stat-label">Projects</span>
-                                </div>
-                            </b-col>
-                            <b-col  class="px-2">
-                                <div class="stat-item">
-                                    <span class="stat-value">100<span class="percent">%</span></span>
-                                    <span class="stat-label">Success</span>
-                                </div>
-                            </b-col>
-                        </b-row>
-
-                    </b-card>
-                </b-col>
+    <b-col lg="4">
+        <b-card class="profile-card" data-aos="fade-right">
+            <div class="profile-header">
+                <div class="avatar-wrapper">
+                    <b-img 
+                        :src="profileCardData.avatar.image" 
+                        :alt="profileCardData.avatar.alt" 
+                        class="profile-avatar" />
+                    <b-badge 
+                        :variant="profileCardData.status.variant" 
+                        class="status-badge">
+                        <span class="status-dot"></span>
+                        {{ profileCardData.status.text }}
+                    </b-badge>
+                </div>
+                <h2 class="profile-name">{{ profileCardData.info.name }}</h2>
+                <p class="profile-title">
+                    <i :class="profileCardData.info.icon + ' me-2'"></i>
+                    {{ profileCardData.info.title }}
+                </p>
+            </div>
+            
+            <div class="profile-stats">
+                <div v-for="(stat, index) in profileCardData.stats" 
+                     :key="index"
+                     class="stat-item mb-3">
+                    <span class="stat-label">{{ stat.label }}</span>
+                    <span class="stat-value">
+                        {{ stat.value }}<span :class="stat.suffix === '%' ? 'percent' : 'plus'">{{ stat.suffix }}</span>
+                    </span>
+                </div>
+            </div>
+        </b-card>
+    </b-col>
 </template>
-<script>
+
+<script setup>
 import { defineOptions } from 'vue'
+import { profileCardData } from '@/config/data/profile-card'
 
 defineOptions({
     name: 'ProfileCard'
 })
 </script>
+
+<style scoped>
+
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: rgba(var(--primary-color-rgb), 0.1);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateX(5px);
+    background: rgba(var(--primary-color-rgb), 0.15);
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    color: var(--text-color);
+}
+
+.plus, .percent {
+    font-size: 0.875rem;
+    margin-left: 2px;
+}
+</style>
