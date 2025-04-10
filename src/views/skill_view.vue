@@ -7,8 +7,7 @@
                     icon="fas fa-laptop-code" 
                     :skills="frontendSkills" 
                     animation="fade-right"
-                />
-                
+                />     
                 <Skills 
                     title="Backend Skills" 
                     icon="fas fa-server" 

@@ -3,9 +3,9 @@
         <b-container class="home-container ">
             <b-row class="">
                 <!-- Profile Section -->
-                <ProfileCard/>
+                   <ProfileCard/>
                 <!-- Experience Section -->
-                <Experience/>
+                    <Experience/>
             </b-row>
         </b-container>
     </MainLayout>

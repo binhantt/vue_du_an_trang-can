@@ -1,55 +1,57 @@
 <template>
     <MainLayout>
         <b-container class="project-container">
-            <h1 class="main-title text-center mb-5" data-aos="fade-down">
+            <h1 class="main-title text-center mb-4" data-aos="fade-down">
                 <i :class="projectsData.icon + ' me-2'"></i>{{ projectsData.title }}
             </h1>
             
-            <b-row>
-                <b-col lg="4" md="6" class="mb-4" 
-                       v-for="(project, index) in projectsData.projects" 
-                       :key="index" 
-                       data-aos="fade-up"
-                       :data-aos-delay="index * 100">
-                    <b-card class="project-card h-100">
-                        <b-img :src="project.image" 
-                               class="project-image mb-3"
-                               :alt="project.title"></b-img>
-                        
-                        <h3 class="project-title">{{ project.title }}</h3>
-                        
-                        <div class="tech-stack mb-3">
-                            <b-badge 
-                                v-for="tech in project.technologies" 
-                                :key="tech"
-                                variant="primary"
-                                class="me-2 mb-2">
-                                {{ tech }}
-                            </b-badge>
-                        </div>
-                        
-                        <p class="project-description">{{ project.description }}</p>
-                        
-                        <div class="project-links mt-auto">
-                            <b-button 
-                                v-if="project.demo" 
-                                :href="project.demo" 
-                                target="_blank" 
-                                variant="outline-primary"
-                                class="me-2">
-                                <i class="fas fa-external-link-alt me-1"></i> Xem Demo
-                            </b-button>
-                            <b-button 
-                                v-if="project.github" 
-                                :href="project.github" 
-                                target="_blank" 
-                                variant="outline-secondary">
-                                <i class="fab fa-github me-1"></i> Mã nguồn
-                            </b-button>
-                        </div>
-                    </b-card>
-                </b-col>
-            </b-row>
+            <div v-for="(row, rowIndex) in projectRows" :key="rowIndex">
+                <b-row class="mb-1">
+                    <b-col lg="4" md="6" class="mb-1" 
+                           v-for="(project, index) in row" 
+                           :key="project.title" 
+                           data-aos="fade-up"
+                           :data-aos-delay="index * 100">
+                        <b-card class="project-card h-100">
+                            <b-img :src="project.image" 
+                                   class="project-image mb-1"
+                                   :alt="project.title"></b-img>
+                            
+                            <h3 class="project-title">{{ project.title }}</h3>
+                            
+                            <div class="tech-stack mb-1">
+                                <b-badge 
+                                    v-for="tech in project.technologies" 
+                                    :key="tech"
+                                    variant="primary"
+                                    class="me-2 mb-1">
+                                    {{ tech }}
+                                </b-badge>
+                            </div>
+                            
+                            <p class="project-description">{{ project.description }}</p>
+                            
+                            <div class="project-links mt-auto">
+                                <b-button 
+                                    v-if="project.demo" 
+                                    :href="project.demo" 
+                                    target="_blank" 
+                                    variant="outline-primary"
+                                    class="me-2">
+                                    <i class="fas fa-external-link-alt me-1"></i> Xem Demo
+                                </b-button>
+                                <b-button 
+                                    v-if="project.github" 
+                                    :href="project.github" 
+                                    target="_blank" 
+                                    variant="outline-secondary">
+                                    <i class="fab fa-github me-1"></i> Mã nguồn
+                                </b-button>
+                            </div>
+                        </b-card>
+                    </b-col>
+                </b-row>
+            </div>
         </b-container>
     </MainLayout>
 </template>
@@ -58,9 +60,21 @@
 import { defineOptions } from 'vue'
 import MainLayout from '@/components/Layout/main_layout.vue'
 import { projectsData } from '@/config/data/projects'
+import { computed } from 'vue'
 
 defineOptions({
     name: 'ProjectView'
+})
+
+const projectRows = computed(() => {
+    const rows = []
+    const itemsPerRow = 3
+    
+    for (let i = 0; i < projectsData.projects.length; i += itemsPerRow) {
+        rows.push(projectsData.projects.slice(i, i + itemsPerRow))
+    }
+    
+    return rows
 })
 </script>
 

@@ -2,7 +2,7 @@
     <b-col :lg="size">
         <BaseCard title="Nhắn tin " icon="fas fa-envelope" :animation="animation">
             <b-alert v-model="showAlert" :variant="alertVariant" dismissible fade class="">
-                {{ alertMessage }}
+                             {{ alertMessage }}
             </b-alert>
             <b-form @submit.prevent="handleSubmit" :class="{ 'was-validated': isSubmitted }">
                 <b-row>
