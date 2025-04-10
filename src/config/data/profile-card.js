@@ -19,12 +19,12 @@ export const profileCardData = {
             label: "Năm kinh nghiệm"
         },
         {
-            value: 50,
+            value: 3,
             suffix: "+",
             label: "Dự án"
         },
         {
-            value: 100,
+            value: 50,
             suffix: "%",
             label: "Thành công"
         }
