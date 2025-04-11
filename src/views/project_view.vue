@@ -1,7 +1,7 @@
 <template>
     <MainLayout>
-        <b-container class="project-container">
-            <h1 class="main-title text-center mb-4" data-aos="fade-down">
+        <b-container class="pt-3 ">
+            <h1 class="text-warning text-center mb-2" data-aos="fade-down">
                 <i :class="projectsData.icon + ' me-2'"></i>{{ projectsData.title }}
             </h1>
             
@@ -12,31 +12,33 @@
                            :key="project.title" 
                            data-aos="fade-up"
                            :data-aos-delay="index * 100">
-                        <b-card class="project-card h-100">
+                        <b-card class="bg-black text-light border-1  border-secondary rounded-lg shadow-lg h-100">
                             <b-img :src="project.image" 
-                                   class="project-image mb-1"
-                                   :alt="project.title"></b-img>
+                                   class="rounded mb-1"
+                                   :alt="project.title"
+                                   fluid
+                                   style="width: 100%; height: 200px; object-fit: cover;"></b-img>
                             
-                            <h3 class="project-title">{{ project.title }}</h3>
+                            <h3 class="text-warning fw-bold">{{ project.title }}</h3>
                             
-                            <div class="tech-stack mb-1">
+                            <div class="mb-1">
                                 <b-badge 
                                     v-for="tech in project.technologies" 
                                     :key="tech"
-                                    variant="primary"
+                                    variant="warning"
                                     class="me-2 mb-1">
                                     {{ tech }}
                                 </b-badge>
                             </div>
                             
-                            <p class="project-description">{{ project.description }}</p>
+                            <p class="text-light">{{ project.description }}</p>
                             
-                            <div class="project-links mt-auto">
+                            <div class="mt-auto">
                                 <b-button 
                                     v-if="project.demo" 
                                     :href="project.demo" 
                                     target="_blank" 
-                                    variant="outline-primary"
+                                    variant="outline-warning"
                                     class="me-2">
                                     <i class="fas fa-external-link-alt me-1"></i> Xem Demo
                                 </b-button>
@@ -44,7 +46,7 @@
                                     v-if="project.github" 
                                     :href="project.github" 
                                     target="_blank" 
-                                    variant="outline-secondary">
+                                    variant="outline-light">
                                     <i class="fab fa-github me-1"></i> Mã nguồn
                                 </b-button>
                             </div>
@@ -77,94 +79,3 @@ const projectRows = computed(() => {
     return rows
 })
 </script>
-
-<style scoped>
-.project-container {
-    padding: var(--space-sm) 0;
-}
-
-.main-title {
-    color: var(--primary-color);
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.project-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary-color);
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.1);
-}
-
-.project-image {
-    border-radius: 10px;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-title {
-    color: var(--secondary-color);
-    font-size: var(--size-1);
-    margin-bottom: var(--space-md);
-}
-
-.project-description {
-    color: var(--text-color);
-    font-size: var(--size-3);
-    margin-bottom: var(--space-lg);
-}
-
-.tech-stack {
-    margin-bottom: var(--space-md);
-}
-
-:deep(.badge) {
-    background-color: var(--primary-color) !important;
-    color: var(--text-color) !important;
-    font-size: var(--size-3);
-    padding: 0.5em 1em;
-}
-
-.project-links {
-    margin-top: auto;
-}
-
-:deep(.btn-outline-primary) {
-    color: var(--text-color);
-    border-color: var(--primary-color);
-}
-
-:deep(.btn-outline-primary:hover) {
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-}
-
-:deep(.btn-outline-secondary) {
-    color: var(--text-color);
-    border-color: var(--text-color);
-}
-
-:deep(.btn-outline-secondary:hover) {
-    background-color: var(--text-color);
-    color: var(--primary-color);
-}
-
-@media (max-width: 768px) {
-    .main-title {
-        font-size: 2rem;
-    }
-    
-    .project-image {
-        height: 180px;
-    }
-}
-</style>

@@ -1,6 +1,6 @@
 <template>
     <MainLayout>
-        <b-container class="contact-container">
+        <b-container class="py-3">
             <b-row class="justify-content-center">
                 <Contact 
                     :contact-items="contactData.contactItems" 

@@ -12,7 +12,6 @@ export const experienceData = {
                 "Hướng dẫn các lập trình viên junior và quản lý dự án nhóm"
             ]
         },
-        
-      
+       
     ]
 }

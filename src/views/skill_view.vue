@@ -1,6 +1,6 @@
 <template>
     <MainLayout>
-        <b-container class="skills-container">
+        <b-container class="py-4">
             <b-row>
                 <Skills 
                     title="Frontend Skills" 
@@ -18,6 +18,7 @@
         </b-container>
     </MainLayout>
 </template>
+
 <script setup>
 import { defineOptions } from 'vue'
 import Skills from '@/components/base/Skills.vue'
@@ -46,79 +47,3 @@ const backendSkills = ref([
     { name: 'Docker', level: 65, icon: 'fab fa-docker' }
 ])
 </script>
-
-<style scoped>
-.skills-container {
-    padding: var(--space-md) 0;
-}
-
-.skill-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: var(--space-lg);
-    height: 100%;
-    transition: all 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary-color);
-}
-
-.section-title {
-    color: var(--primary-color);
-    font-size: var(--size-1);
-    margin-bottom: var(--space-lg);
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--space-lg);
-}
-
-.skill-item {
-    background: var(--bg-overlay);
-    padding: var(--space-md);
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-}
-
-.skill-item:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-3px);
-}
-
-.skill-item i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: var(--space-sm);
-}
-
-.skill-name {
-    display: block;
-    color: var(--text-color);
-    font-size: var(--size-2);
-    margin-bottom: var(--space-sm);
-}
-
-:deep(.progress) {
-    background-color: var(--bg-overlay);
-    height: 8px;
-    border-radius: 4px;
-}
-
-:deep(.progress-bar) {
-    background-color: var(--primary-color);
-    transition: width 1s ease;
-}
-
-@media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>

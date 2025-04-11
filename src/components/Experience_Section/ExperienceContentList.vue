@@ -1,5 +1,6 @@
 <template>
     <b-list-group flush class="bg-black text-light">
+      
         <b-list-group-item v-for="(achievement, idx) in achievements" 
                            :key="idx"
                            class="bg-black text-light border-secondary">
@@ -10,7 +11,10 @@
 
 <script setup>
 defineProps({
-    achievements: Array
+    achievements: {
+        type: Array,
+        required: true
+    }
 })
 </script>
 

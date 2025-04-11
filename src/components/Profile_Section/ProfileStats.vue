@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-4">
+    <div class="mt-4" >
         <div v-for="(stat, index) in stats" 
              :key="index"
              class="d-flex align-items-center justify-content-between p-3 mb-3 rounded  bg-black text-white border-start border-warning border-4 shadow-sm hover-translate-x-5">

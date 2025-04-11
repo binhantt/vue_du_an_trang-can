@@ -1,7 +1,7 @@
 <template>
-    <div class="main-layout d-flex p-0 vh-100">
+    <div class="main-layout d-flex  vh-100 bg-black">
         <SidebarLayout class="sidebar border-end border-secondary d-none d-lg-block"></SidebarLayout>
-        <div class="d-flex flex-column flex-grow-1">
+        <div class="d-flex flex-column flex-grow-1 ">
             <NavbarLayout class="navbar-wrapper"></NavbarLayout>
             <div class="content-wrapper flex-grow-1 ps-4 pe-4 bg-black text-light">
                 <slot></slot>

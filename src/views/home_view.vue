@@ -1,6 +1,6 @@
 <template>
     <MainLayout>
-        <b-container class="home-container ">
+        <b-container class="home-container py-3">
             <b-row class="">
                 <!-- Profile Section -->
                    <ProfileCard/>
