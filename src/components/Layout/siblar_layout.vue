@@ -1,6 +1,6 @@
 <template>
-    <b-sidebar id="sidebar" visible bg-variant="primary" text-variant="light" shadow>
-        <div class="mt-4 overflow-hidden text-light">
+    <b-sidebar id="sidebar" visible bg-variant="dark" text-variant="light" shadow>
+        <div class="mt-4 overflow-hidden text-light bg-black">
             <div class="text-center">
                 <ProfileSection />
 

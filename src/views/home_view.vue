@@ -21,33 +21,3 @@ defineOptions({
     name: 'HomeViews'
 })
 </script>
-
-<style scoped>
-
-:deep(.list-group-item) {
-    background: transparent !important;
-    color: var(--text-color) !important;
-    border-color: var(--border-color);
-    padding: var(--space-md);
-    margin-bottom: var(--space-sm);
-    transition: all 0.3s ease;
-}
-
-:deep(.list-group-item:hover) {
-    background: var(--bg-overlay) !important;
-    transform: translateX(var(--space-sm));
-    border-color: var(--primary-color);
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 var(--timeline-bg); }
-    70% { box-shadow: 0 0 0 10px transparent; }
-    100% { box-shadow: 0 0 0 0 transparent; }
-}
-
-@media (max-width: 991.98px) {
-    .home-container {
-        padding: var(--space-md);
-    }
-}
-</style>

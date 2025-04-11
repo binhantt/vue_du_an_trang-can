@@ -1,15 +1,15 @@
 <template>
-    <b-navbar toggleable="sm" class="bg-black shadow-sm">
+    <b-navbar toggleable="sm" class="bg-black shadow-sm border-bottom border-dark">
         <b-container>
-            <b-navbar-toggle target="nav-collapse" class="border-0">
+            <b-navbar-toggle target="nav-collapse">
                 <template #default="{ expanded }">
                     <i :class="expanded ? 'fas fa-times' : 'fas fa-bars'" class="text-white"></i>
                 </template>
             </b-navbar-toggle>
 
-            <b-collapse id="nav-collapse" is-nav class="bg-black rounded-lg border border-light">
+            <b-collapse id="nav-collapse" is-nav class="bg-black d-flex justify-content-between">
                 <NavbarRoutes />
-                <b-navbar-nav class="ms-auto">
+                <b-navbar-nav class="d-flex align-items-center ">
                     <NavbarSocialLinks />
                     <NavbarCvButton />
                 </b-navbar-nav>

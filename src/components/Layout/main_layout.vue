@@ -3,17 +3,14 @@
         <SidebarLayout class="sidebar border-end border-secondary d-none d-lg-block"></SidebarLayout>
         <div class="d-flex flex-column flex-grow-1">
             <NavbarLayout class="navbar-wrapper"></NavbarLayout>
-            <div class="content-wrapper flex-grow-1 ps-4 pe-4">
+            <div class="content-wrapper flex-grow-1 ps-4 pe-4 bg-black text-light">
                 <slot></slot>
             </div>
-
         </div>
     </div>
 </template>
 
 <style scoped>
-
-
 @media (max-width: 991.98px) {
     .content-wrapper {
         padding-left: 0 !important;
