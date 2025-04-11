@@ -6,6 +6,17 @@ export const profileData = {
         status: "..",
         location: "Thành phố Hồ Chí Minh, Việt Nam"
     },
+    details: [
+        { icon: 'fas fa-map-marker-alt', text: 'Thành phố Hồ Chí Minh, Việt Nam' },
+        { icon: 'fas fa-graduation-cap', text: 'Đại học Công nghệ TP.HCM (HUTECH)' },
+        { icon: 'fas fa-code', text: 'Kỹ sư Phần mềm' },
+        { icon: 'fas fa-briefcase', text: 'Lập trình viên Frontend tại TechCorp' }
+    ],
+    socialLinks: [
+        { icon: 'fab fa-github', url: 'https://github.com/binhan', target: '_blank', title: 'GitHub' },
+        { icon: 'fab fa-linkedin', url: 'https://linkedin.com/in/binhan', target: '_blank', title: 'LinkedIn' },
+        { icon: 'fas fa-envelope', url: 'mailto:binhan@gmail.com', title: 'Gửi Email' }
+    ],
     education: {
         university: "Đại học Công nghệ TP.HCM (HUTECH)",
         degree: "Kỹ sư Phần mềm"
