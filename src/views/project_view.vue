@@ -1,6 +1,6 @@
 <template>
     <MainLayout>
-        <b-container class="pt-3 ">
+        <b-container class="">
             <h1 class="text-warning text-center mb-2" data-aos="fade-down">
                 <i :class="projectsData.icon + ' me-2'"></i>{{ projectsData.title }}
             </h1>

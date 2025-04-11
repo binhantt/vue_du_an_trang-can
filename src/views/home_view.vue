@@ -1,11 +1,11 @@
 <template>
     <MainLayout>
-        <b-container class="home-container py-3">
-            <b-row class="">
+        <b-container class="justify-content-center">
+            <b-row>
                 <!-- Profile Section -->
-                   <ProfileCard/>
+                <ProfileCard />
                 <!-- Experience Section -->
-                    <Experience/>
+                <Experience />
             </b-row>
         </b-container>
     </MainLayout>
@@ -15,7 +15,6 @@
 import MainLayout from '@/components/Layout/main_layout.vue'
 import ProfileCard from '@/components/Profile_Section/index.vue'
 import Experience from '@/components/Experience_Section/index.vue'
-import { defineOptions } from 'vue'
 
 defineOptions({
     name: 'HomeViews'
