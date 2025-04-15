@@ -13,7 +13,7 @@ export const contactData = {
         {
             icon: 'fas fa-phone',
             title: 'Điện thoại',
-            content: '+84 123 456 789'
+            content: '0329.104.253 '
         }
     ],
     socialLinks: [
