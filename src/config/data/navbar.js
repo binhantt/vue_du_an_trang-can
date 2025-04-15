@@ -20,7 +20,7 @@ export const navbarData = {
     ],
     cv: {
         text: 'Tải CV',
-        icon: 'fas fa-download',
+        icon: 'fas fa-eye',
         url: 'https://drive.google.com/file/d/1Ix4_6psh69PMvWEv14Y9K9jcALN8EotD/view?usp=sharing'
     }
 }
