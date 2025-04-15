@@ -1,7 +1,7 @@
 <template>
     <MainLayout>
         <b-container class="py-3">
-            <b-row class="justify-content-center">
+            <b-row class="py-md-3">
                 <Contact 
                     :contact-items="contactData.contactItems" 
                     :socials="contactData.socialLinks" 

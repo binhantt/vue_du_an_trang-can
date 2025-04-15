@@ -1,5 +1,11 @@
 <template>
-    <b-alert :show="showAlert" :variant="variant" dismissible fade class="mb-3" @dismissed="onDismissed">
+    <b-alert 
+        :show="showAlert" 
+        :variant="variant" 
+        dismissible 
+        fade 
+        class="mb-3 animate__animated animate__fadeInDown animate__faster" 
+        @dismissed="onDismissed">
         {{ message }}
     </b-alert>
 </template>
@@ -19,3 +25,9 @@ const onDismissed = () => {
     emit('update:showAlert', false)
 }
 </script>
+
+<style scoped>
+.animate__animated {
+    animation-duration: 0.5s;
+}
+</style>

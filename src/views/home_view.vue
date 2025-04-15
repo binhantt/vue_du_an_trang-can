@@ -2,10 +2,8 @@
     <MainLayout>
         <b-container class="justify-content-center">
             <b-row>
-                <!-- Profile Section -->
-                <ProfileCard />
-                <!-- Experience Section -->
-                <Experience />
+                <ProfileCard class="animate__animated animate__fadeInLeft hover-lift" />
+                <Experience class="animate__animated animate__fadeInRight hover-lift" />
             </b-row>
         </b-container>
     </MainLayout>
@@ -20,3 +18,15 @@ defineOptions({
     name: 'HomeViews'
 })
 </script>
+
+<style scoped>
+.hover-lift {
+    transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+/* Make sure to import animate.css in your main.js or index.html */
+</style>

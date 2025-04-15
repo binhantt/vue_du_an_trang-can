@@ -3,7 +3,7 @@
         <SidebarLayout class="sidebar border-end border-secondary d-none d-lg-block bg-black" style="width: 20%;"></SidebarLayout>
         <div class="d-flex flex-column flex-grow-1 vh-100" style="width: 80%;">
             <NavbarLayout class="navbar-wrapper" ></NavbarLayout>
-            <div class="content-wrapper flex-grow-1 ps-4 pe-4  bg-black pt-3 "  bg-variant="dark" text-variant="light">
+            <div class="content-wrapper flex-grow-1 ps-md-4 pe-md-4  bg-black pt-3 "  bg-variant="dark" text-variant="light">
                 <slot></slot>
             </div>
 
