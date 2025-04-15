@@ -8,7 +8,7 @@ export const contactData = {
         {
             icon: 'fas fa-envelope',
             title: 'Email',
-            content: 'binhan@gmail.com'
+            content: 'doan44503@gmail.com'
         },
         {
             icon: 'fas fa-phone',
