@@ -4,7 +4,7 @@
         v-for="(route, index) in navbarData.routes"
         :key="index"
         :to="route.path"
-        class="nav-link fw-medium py-2 rounded d-flex align-items-center"
+        class="nav-link fw-medium py-2 rounded d-flex align-items-center  justify-content-between"
         :class="{
           'text-warning': currentPath === route.path,
           'text-light': currentPath !== route.path
