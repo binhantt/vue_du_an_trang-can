@@ -13,9 +13,9 @@ export const profileData = {
         { icon: 'fas fa-briefcase', text: 'Lập trình viên Frontend tại TechCorp' }
     ],
     socialLinks: [
-        { icon: 'fab fa-github', url: 'https://github.com/binhan', target: '_blank', title: 'GitHub' },
-        { icon: 'fab fa-linkedin', url: 'https://linkedin.com/in/binhan', target: '_blank', title: 'LinkedIn' },
-        { icon: 'fas fa-envelope', url: 'mailto:binhan@gmail.com', title: 'Gửi Email' }
+        { icon: 'fab fa-github', url: 'https://github.com/binhantt', target: '_blank', title: 'GitHub' },
+  //      { icon: 'fab fa-linkedin', url: 'https://linkedin.com/in/binhan', target: '_blank', title: 'LinkedIn' },
+        { icon: 'fas fa-envelope', url: 'mailto:doan44503@gmail.com', title: 'Gửi Email' }
     ],
     education: {
         university: "Đại học Công nghệ TP.HCM (HUTECH)",
@@ -39,36 +39,20 @@ export const profileData = {
             label: "Tỷ lệ thành công"
         }
     },
-    social: [
-        {
-            icon: "fab fa-github",
-            link: "https://github.com/binhan",
-            title: "GitHub"
-        },
-        {
-            icon: "fab fa-linkedin",
-            link: "https://linkedin.com/in/binhan",
-            title: "LinkedIn"
-        },
-        {
-            icon: "fas fa-envelope",
-            link: "mailto:binhan@gmail.com",
-            title: "Gửi Email"
-        }
-    ],
+
     skills: {
         frontend: ["Vue.js", "React", "JavaScript", "HTML5", "CSS3"],
         tools: ["Git", "Webpack", "VS Code", "Figma"],
         soft: ["Làm việc nhóm", "Giao tiếp", "Quản lý thời gian"]
     },
-    languages: [
-        {
-            name: "Tiếng Việt",
-            level: "Bản ngữ"
-        },
-        {
-            name: "Tiếng Anh",
-            level: "Thành thạo"
-        }
-    ]
+    // languages: [
+    //     {
+    //         name: "Tiếng Việt",
+    //         level: "Bản ngữ"
+    //     },
+    //     {
+    //         name: "Tiếng Anh",
+    //         level: "Thành thạo"
+    //     }
+    // ]
 }

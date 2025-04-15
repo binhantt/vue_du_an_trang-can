@@ -5,7 +5,9 @@
             style="width: 40px; height: 40px" :target="link.target" :title="link.title">
             <i :class="link.icon"></i>
         </b-button>
+        
     </div>
+
 </template>
 
 <script setup>

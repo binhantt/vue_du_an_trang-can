@@ -19,23 +19,19 @@ export const contactData = {
     socialLinks: [
         { 
             icon: 'fab fa-github', 
-            link: 'https://github.com/binhan',
+            link: 'https://github.com/binhantt',
             title: 'GitHub'
         },
-        { 
-            icon: 'fab fa-linkedin', 
-            link: 'https://linkedin.com/in/binhan',
-            title: 'LinkedIn'
-        },
+        // { 
+        //     icon: 'fab fa-linkedin', 
+        //     link: 'https://linkedin.com/in/binhan',
+        //     title: 'LinkedIn'
+        // },
         { 
             icon: 'fab fa-facebook', 
-            link: 'https://facebook.com/binhan',
+            link: 'https://web.facebook.com/profile.php?id=100055981183341',
             title: 'Facebook'
         },
-        { 
-            icon: 'fab fa-instagram', 
-            link: 'https://instagram.com/binhan',
-            title: 'Instagram'
-        }
+       
     ]
 }

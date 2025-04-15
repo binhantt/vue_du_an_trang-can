@@ -10,13 +10,13 @@ export const navbarData = {
         {
             name: 'GitHub',
             icon: 'fab fa-github',
-            url: 'https://github.com/binhan'
+            url: 'https://github.com/binhantt'
         },
-        {
-            name: 'LinkedIn',
-            icon: 'fab fa-linkedin',
-            url: 'https://linkedin.com/in/binhan'
-        }
+        // {
+        //     name: 'LinkedIn',
+        //     icon: 'fab fa-linkedin',
+        //     url: 'https://linkedin.com/in/binhan'
+        // }
     ],
     cv: {
         text: 'Tải CV',

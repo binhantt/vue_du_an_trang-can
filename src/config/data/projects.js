@@ -7,8 +7,8 @@ export const projectsData = {
             description: 'Trang landing page giới thiệu sản phẩm với giao diện hiện đại, hiệu ứng chuyển động mượt mà và tương thích trên mọi thiết bị.',
             image: '/bt.png',
             technologies: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS'],
-            demo: 'https://ecommerce.binhan.dev',
-            github: 'https://github.com/binhan/ecommerce'
+            demo: 'https://binhantt.github.io/Vue-AnatonLandingPage/',
+            github: 'https://github.com/binhantt/Vue-AnatonLandingPage'
         },
        
         {
@@ -23,8 +23,8 @@ export const projectsData = {
                 'JWT',
                 'Bcrypt'
             ],
-            demo: 'https://api.binhan.dev/docs',
-            github: 'https://github.com/binhan/doanbankend'
+           // demo: 'https://api.binhan.dev/docs',
+            github: 'https://github.com/binhantt/bankend'
         },
         {
             title: 'CV Portfolio Website',
@@ -37,9 +37,9 @@ export const projectsData = {
                 'Font Awesome',
                 'CSS Variables'
             ],
-            demo: 'https://binhan-cv.vercel.app',
-            github: 'https://github.com/binhan/cv'
-        },
+            demo: 'https://du-an-trang-4rj3uoxuk-binhantts-projects.vercel.app/',
+            github: 'https://github.com/binhantt/du_an_trang-can'
+        },  
 
     ]
 }
