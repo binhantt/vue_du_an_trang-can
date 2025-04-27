@@ -10,7 +10,7 @@ export const profileData = {
         { icon: 'fas fa-map-marker-alt', text: 'Thành phố Hồ Chí Minh, Việt Nam' },
         { icon: 'fas fa-graduation-cap', text: 'Đại học Công nghệ TP.HCM (HUTECH)' },
         { icon: 'fas fa-code', text: 'Kỹ sư Phần mềm' },
-        { icon: 'fas fa-briefcase', text: 'Lập trình viên Frontend tại TechCorp' }
+        // { icon: 'fas fa-briefcase', text: 'Lập trình viên Frontend tại TechCorp' }
     ],
     socialLinks: [
         { icon: 'fab fa-github', url: 'https://github.com/binhantt', target: '_blank', title: 'GitHub' },
