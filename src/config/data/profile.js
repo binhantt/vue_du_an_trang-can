@@ -21,10 +21,10 @@ export const profileData = {
         university: "Đại học Công nghệ TP.HCM (HUTECH)",
         degree: "Kỹ sư Phần mềm"
     },
-    work: {
-        position: "Lập trình viên Frontend",
-        company: "TechCorp"
-    },
+    // work: {
+    //     position: "Lập trình viên Frontend",
+    //     company: "TechCorp"
+    // },
     stats: {
         experience: {
             value: 3,
