@@ -21,6 +21,6 @@ export const navbarData = {
     cv: {
         text: 'Tải CV',
         icon: 'fas fa-eye',
-        url: 'https://drive.google.com/file/d/1KzP8WkWEkI_r3EBjasudN2VNW2p1bKjh/view?usp=sharing'
+        url: 'https://drive.google.com/file/d/1fPLhJOjVK2l-97eCUTAAOcw6d3em2uTH/view?usp=sharing'
     }
 }
