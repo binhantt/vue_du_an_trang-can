@@ -19,7 +19,7 @@ export const profileCardData = {
             label: "Năm kinh nghiệm"
         },
         {
-            value: 4,
+            value: 5,
             suffix: "+",
             label: "Dự án"
         },

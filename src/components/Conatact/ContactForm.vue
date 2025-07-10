@@ -8,7 +8,9 @@
                         <FormInput 
                             :modelValue="form.name" 
                             placeholder="Your Name" 
+                            class="placeholder-yellow-bold"
                             :state="nameState"
+                            is-text
                             invalidFeedback="Name must be at least 2 characters"
                             @update:modelValue="form.name = $event"
                         />
@@ -19,6 +21,7 @@
                             type="email" 
                             placeholder="Your Email"
                             :state="emailState"
+                              class="placeholder-yellow-bold"
                             invalidFeedback="Please enter a valid email address"
                             @update:modelValue="form.email = $event"
                         />
@@ -28,6 +31,7 @@
                             :modelValue="form.message" 
                             placeholder="Your Message" 
                             :state="messageState"
+                            class="placeholder-yellow-bold"
                             invalidFeedback="Message must be at least 10 characters"
                             @update:modelValue="form.message = $event"
                         />
@@ -41,7 +45,7 @@
                             :disabled="isSubmitting"
                         >
                             <b-spinner small v-if="isSubmitting"></b-spinner>
-                            <span v-else><i class="fas fa-paper-plane me-2"></i>Send Message</span>
+                            <span  class="placeholder-yellow-bold"  v-else><i class="fas fa-paper-plane me-2"></i>Send Message</span>
                         </b-button>
                     </b-col>
                 </b-row>
@@ -139,3 +143,30 @@ const handleSubmit = async () => {
     }
 }
 </script>
+<style>
+
+.placeholder-yellow-bold{
+    color: #ffff ;
+  font-weight: 500;
+ 
+  letter-spacing: 0.5px;
+  opacity: 1;
+}
+
+
+
+.placeholder-yellow-bold input::placeholder {
+  color: #ffff ;
+  font-weight: 500;
+ 
+  letter-spacing: 0.5px;
+  opacity: 1;
+}
+.placeholder-yellow-bold textarea::placeholder{
+    color: #fff;
+  font-weight: 500;
+ 
+  letter-spacing: 0.5px;
+  opacity: 1;
+}
+</style>

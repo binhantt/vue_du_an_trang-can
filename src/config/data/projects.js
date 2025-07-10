@@ -39,7 +39,33 @@ export const projectsData = {
             ],
             demo: 'https://du-an-trang-4rj3uoxuk-binhantts-projects.vercel.app/',
             github: 'https://github.com/binhantt/du_an_trang-can'
-        },  
-
+        }, 
+        {
+            title: 'Quản lý hệ thống (React + Node.js)',
+            description: 'Ứng dụng fullstack quản lý người dùng, sử dụng React 18 (Vite) cho frontend và Node.js + Express cho backend. Tích hợp đăng nhập, xác thực JWT, form validation, responsive UI và RESTful API kết nối MySQL.',
+            image: '/sever2.png', // bạn có thể thêm hình minh họa dự án
+            technologies: [
+              'React 18',
+              'Vite',
+              'React Bootstrap',
+              'React Router',
+            ],
+            demo: 'https://sever-react-rgp0cuaj9-binhantts-projects.vercel.app/', 
+            github: 'https://github.com/binhantt/sever_react' // Link GitHub thật
+          },
+          
+        {
+            title: 'Nuxt Minimal Starter Website',
+            description: 'Dự án khởi tạo với Nuxt 3 theo cấu trúc tối giản. Giao diện modular gồm Hero section, Hot Deals, layout chính. Tích hợp auto import component, chuẩn SEO, cấu hình sẵn cho production.',
+            image: '/bai2.png', // Đổi thành ảnh cover nếu bạn có
+            technologies: [
+              'Nuxt 3',
+              'Vue 3',
+              'Vite',
+              'Pinia',
+              'Bulma'
+            ],
+            github: 'https://github.com/binhantt/nuxt-user-page'
+          }          
     ]
 }

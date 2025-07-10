@@ -20,7 +20,7 @@
             </b-badge>
         </div>
         
-        <p class="text-light">{{ project.description }}</p>
+        <p class="text-light project-desc">{{ project.description }}</p>
         
         <div class="mt-auto">
             <b-button 
@@ -90,6 +90,15 @@
 .btn-hover:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(255, 193, 7, 0.2);
+}
+
+.project-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Số dòng muốn hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 3.6em; /* Đảm bảo chiều cao tối thiểu nếu muốn các card đều nhau */
 }
 </style>
 

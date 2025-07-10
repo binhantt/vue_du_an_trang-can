@@ -31,7 +31,7 @@ export const profileData = {
             label: "Năm kinh nghiệm"
         },
         projects: {
-            value: 3,
+            value: 5,
             label: "Dự án đã hoàn thành"
         },
         success: {

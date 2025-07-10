@@ -10,18 +10,18 @@ export const introduceData = {
         title: "Học vấn",
         icon: "fas fa-graduation-cap",
         timeline: [
-            {
-                period: "2016 - 2020",
-                school: "Đại học Công nghệ Thông tin",
-                degree: "Kỹ sư Phần mềm",
-                focus: "Chuyên ngành Phát triển Web và Thiết kế UI/UX"
-            },
-            {
-                period: "2020 - 2021",
-                school: "Trung tâm Đào tạo CNTT Quốc tế",
-                degree: "Chứng chỉ Frontend Advanced",
-                focus: "React, Vue.js, và Công nghệ Web Hiện đại"
-            }
-        ]
+          {
+            period: "2021 - Hiện tại",
+            school: "Đại học Công nghệ TP.HCM (HUTECH)",
+            degree: "Sinh viên ngành Công nghệ Thông tin",
+            focus: "Tập trung vào Lập trình Web, Cơ sở dữ liệu và Phân tích thiết kế hệ thống"
+          },
+          {
+            period: "Song song",
+            school: "Tự học & học hỏi thực tế",
+            degree: "Tự trau dồi kỹ năng lập trình",
+            focus: "Học qua tài liệu online, thực hành dự án cá nhân, học hỏi từ các anh chị đi trước về React, Vue.js, Node.js, UI/UX"
+          }
+        ]      
     }
 }
