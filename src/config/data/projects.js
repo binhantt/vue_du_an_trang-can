@@ -56,7 +56,7 @@ export const projectsData = {
           
         {
             title: 'Nuxt Minimal Starter Website',
-            description: 'Dự án khởi tạo với Nuxt 3 theo cấu trúc tối giản. Giao diện modular gồm Hero section, Hot Deals, layout chính. Tích hợp auto import component, chuẩn SEO, cấu hình sẵn cho production.',
+            description: 'Trang người dùng xây dựng bằng Nuxt 3 với cấu trúc tối giản, giao diện modular. Hiển thị sản phẩm hot, quản lý thông tin cá nhân, và tích hợp layout chính. Hỗ trợ auto import component, tối ưu SEO và chuẩn bị sẵn cho triển khai production.',
             image: '/bai2.png', // Đổi thành ảnh cover nếu bạn có
             technologies: [
               'Nuxt 3',
