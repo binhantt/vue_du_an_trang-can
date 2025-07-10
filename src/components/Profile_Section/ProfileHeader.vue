@@ -16,11 +16,11 @@
                 {{ status.text }}
             </b-badge>
         </div>
-        <h2 class="h4 fw-bold text-white mb-3">{{ info.name }}</h2>
+        <!-- <h2 class="h4 fw-bold text-white mb-3">{{ info.name }}</h2>
         <p class="text-warning mb-0">
             <i :class="info.icon + ' me-2 icon-bounce'"></i>
             {{ info.title }}
-        </p>
+        </p> -->
     </div>
 </template>
 

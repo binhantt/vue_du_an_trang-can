@@ -14,12 +14,12 @@ export const profileCardData = {
     },
     stats: [
         {
-            value: 3,
+            value: 1,
             suffix: "+",
             label: "Năm kinh nghiệm"
         },
         {
-            value: 3,
+            value: 4,
             suffix: "+",
             label: "Dự án"
         },
